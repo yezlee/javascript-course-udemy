@@ -27,6 +27,9 @@ console.log(population < 33);
 const description = country + ' is in ' + continent + ', and its '+ population + ' million people speak ' + language;
 
 console.log(description);
-console.log(description2);
 
+//LECTRUE: Strings and Template Literals
+const description2 = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
+
+console.log(description2);
 
