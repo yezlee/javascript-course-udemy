@@ -138,8 +138,8 @@ TEST DATA 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1
 TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
 
 GOOD LUCK 😀
-
-
+*/
+/*
 //TEST DATA 1
 const massMark = 78;
 const heightMark = 1.69;
@@ -168,6 +168,7 @@ markHigherBMI2 = BMIMark2 > BMIJohn2;
 console.log(markHigherBMI2);
 
 
+
 ////////////////////////////////////
 // 17. Strings and Template Literals
 
@@ -192,7 +193,7 @@ console.log(`String
 multiple
 lines`);
 
-*/
+
 
 ////////////////////////////////////
 // 18. Taking Decisions : if / else Statements
@@ -221,3 +222,151 @@ if(birthYear <= 2000){
 }
 
 console.log(century);
+*/
+
+////////////////////////////////////
+// Coding Challenge #2
+/*
+Use the BMI example from Challenge #1, and the code you already wrote, and
+improve it.
+Your tasks:
+1. Print a nice output to the console, saying who has the higher BMI. The message
+is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
+BMI (28.3) is higher than John's (23.9)!"
+Hint: Use an if/else statement 
+GOOD LUCK 😀
+
+
+
+//1
+if(BMIMark > BMIJohn){
+    console.log("Mark's BMI is higher than John's!");
+}else{
+    console.log("John's BMI is higher than Mark's!");
+}
+
+//2
+if(BMIMark > BMIJohn){
+    console.log(`Mark's(${BMIMark}) BMI is higher than John's BMI(${BMIJohn})!`)
+}else{
+    console.log(`John's BMI(${BMIJohn}) is higher than Mark's(${BMIMark})!`)
+}
+*/
+/*
+////////////////////////////////////
+// 20. Type Conversion and Coercion
+
+//Type Conversion
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(inputYear + 18);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Jonas')); //NaN - Stands for Not a number. Which means invalid number.
+console.log(typeof NaN); // number - which means the type of not a number is actually number. It's still a number of somehow, but it's an invalid one.
+
+console.log(String(23), 23);
+
+//Type Coercion
+console.log(' I am ' + 23 + ' years old'); 
+console.log('23' - '10' - 3);
+console.log('23' + '10' + 3);
+console.log('23' * '2'); //46
+console.log('23' / '2'); //11.5
+console.log('23' > '2'); //true
+
+let n = '1' + 1; // '11'
+n = n - 1;
+console.log(n); // 10
+console.log(2+3+4+'5'); // '95'
+console.log('10'-'4'-'3'-2+'5'); // '15'
+
+
+
+////////////////////////////////////
+// 21. Truthy and Falsy Values
+
+// 5 falsy values : 0, '', undefined, null, NaN
+
+console.log(Boolean(0)); //false
+console.log(Boolean(undefined)); //false
+console.log(Boolean('Jonas')); //true
+console.log(Boolean({})); //true
+console.log(Boolean('')); //false
+
+const money = 0;
+if(money){
+    console.log("Don't spend it all!");
+}else{
+    console.log("You should get a job.");
+}
+
+let height;
+if(height){
+    console.log('Yay, Height is defined!');
+}else{
+    console.log('Height is UNDEFINED.');
+}
+
+let height2 = 0; //Height is UNDEFINED. Which is wrong!
+if(height){
+    console.log('Yay, Height is defined!');
+}else{
+    console.log('Height is UNDEFINED.');
+}
+
+
+
+////////////////////////////////////
+// 22. == vs. ===
+const age = '18';
+if (age === 18) console.log('You just became an adult :D (strict)');
+
+if (age == 18) console.log('You just became an adult :D (loose)');
+
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) { // 22 === 23 -> FALSE
+  console.log('Cool! 23 is an amzaing number!')
+} else if (favourite === 7) {
+  console.log('7 is also a cool number')
+} else if (favourite === 9) {
+  console.log('9 is also a cool number')
+} else {
+  console.log('Number is not 23 or 7 or 9')
+}
+
+if (favourite !== 23) console.log('Why not 23?');
+
+*/
+
+////////////////////////////////////
+// 23. Boolean Logic
+// 24. Logical Operators
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+// if (hasDriversLicense && hasGoodVision) {
+//   console.log('Sarah is able to drive!');
+// } else {
+//   console.log('Someone else should drive...');
+// }
+
+const isTired = false; // C
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log('Sarah is able to drive!');
+} else {
+  console.log('Someone else should drive...');
+}
+
+
+

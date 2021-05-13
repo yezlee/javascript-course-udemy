@@ -33,3 +33,10 @@ const description2 = `${country} is in ${continent}, and its ${population} milli
 
 console.log(description2);
 
+//LECTURE: Taking Decisions: if / else Statements
+if(population > 33){
+    console.log("Korea's population is above average");
+}else{
+    console.log(`Korea's population is ${33 - population} million below average`);
+}
+
