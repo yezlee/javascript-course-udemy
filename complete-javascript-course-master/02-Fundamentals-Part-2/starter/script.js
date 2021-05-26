@@ -53,11 +53,10 @@ const calcAge2 = function (birthYeah) {
 const age2 = calcAge2(1991);
   
 console.log(age1, age2);
-*/
+
 
 ///////////////////////////////////////
 // 35. Arrow functions
-
 
 const calcAge3 = birthYeah => 2037 - birthYeah;
 const age3 = calcAge3(1991);
@@ -141,11 +140,54 @@ HINT: To check if number A is at least double number B, check for A >= 2 * B. Ap
 GOOD LUCK 😀
 */
 
-// const calcAverage = calcAverage(scoreDolphins1, scoreDolphins2, scoreDolphins3, ) 
-//     => (score1 + score2 + score3) / 3;
+/*
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+const avgDolphins = calcAverage(65,54,49);
+const avgKoalas = calcAverage(23,34,27);
+
+console.log(avgDolphins);
+console.log(avgKoalas);
+
+function checkWinner(avgDolphins, avgKoalas){
+  if(avgDolphins >= avgKoalas * 2){
+    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+  }else if(avgKoalas >= avgDolphins * 2){
+    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+  }else{
+    console.log(`No one wins.`);
+  }
+}
+
+checkWinner(avgDolphins, avgKoalas);
 
 
-// function checkWinner(avgDolphins, avgKoalas){
+//answer
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+console.log(calcAverage(3, 4, 5));
 
-//     console.log(`${winner} win (${winnerScore} vs. ${loserScore})`)
-// }
+// Test 1
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
+console.log(scoreDolphins, scoreKoalas);
+
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`);
+  } else {
+    console.log('No team wins...');
+  }
+}
+checkWinner(scoreDolphins, scoreKoalas);
+
+checkWinner(576, 111);
+
+// Test 2
+scoreDolphins = calcAverage(85, 54, 41);
+scoreKoalas = calcAverage(23, 34, 27);
+console.log(scoreDolphins, scoreKoalas);
+checkWinner(scoreDolphins, scoreKoalas);
+
+*/
