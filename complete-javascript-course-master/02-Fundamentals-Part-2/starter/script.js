@@ -41,14 +41,14 @@ console.log(appleJuice);
 // 34. Function Declarations vs. Expressions
 
 // Function declaration
-function calcAge1(birthYeah) {
-    return 2037 - birthYeah;
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
 }
 const age1 = calcAge1(1991);
   
 // Function expression
-const calcAge2 = function (birthYeah) {
-    return 2037 - birthYeah;
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear;
 }
 const age2 = calcAge2(1991);
   
@@ -58,19 +58,19 @@ console.log(age1, age2);
 ///////////////////////////////////////
 // 35. Arrow functions
 
-const calcAge3 = birthYeah => 2037 - birthYeah;
+const calcAge3 = birthYear => 2037 - birthYear;
 const age3 = calcAge3(1991);
 console.log(age3); //46
 
-const yearsUntilRetirement2 = birthYeah => {
-    const age = 2037 - birthYeah;
+const yearsUntilRetirement2 = birthYear => {
+    const age = 2037 - birthYear;
     const retirement = 65 - age;
     return retirement; 
 }
 console.log(yearsUntilRetirement2(1991)); //19
 
-const yearsUntilRetirement = (birthYeah, firstName) => {
-  const age = 2037 - birthYeah;
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = 2037 - birthYear;
   const retirement = 65 - age;
   return `${firstName} retires in ${retirement} years`;
 }
@@ -96,12 +96,12 @@ console.log(fruitProcessor(2, 3));
 
 ///////////////////////////////////////
 // Reviewing Functions
-const calcAge = function (birthYeah) {
-  return 2037 - birthYeah;
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
 }
 
-const yearsUntilRetirement = function (birthYeah, firstName) {
-  const age = calcAge(birthYeah);
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
   const retirement = 65 - age;
 
   if (retirement > 0) {
@@ -140,54 +140,132 @@ HINT: To check if number A is at least double number B, check for A >= 2 * B. Ap
 GOOD LUCK 😀
 */
 
+
+// const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+// const scoreDolphins = calcAverage(65,54,49);
+// const scoreKoalas = calcAverage(23,34,27);
+
+// console.log(scoreDolphins);
+// console.log(scoreKoalas);
+
+// function checkWinner(avgDolphins, avgKoalas){
+//   if(avgDolphins >= avgKoalas * 2){
+//     console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+//   }else if(avgKoalas >= avgDolphins * 2){
+//     console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+//   }else{
+//     console.log(`No one wins.`);
+//   }
+// }
+
+// checkWinner(scoreDolphins, scoreKoalas);
+
+
+// //answer
+// const calcAverage = (a, b, c) => (a + b + c) / 3;
+// console.log(calcAverage(3, 4, 5));
+
+// // Test 1
+// let scoreDolphins = calcAverage(44, 23, 71);
+// let scoreKoalas = calcAverage(65, 54, 49);
+// console.log(scoreDolphins, scoreKoalas);
+
+// const checkWinner = function (avgDolphins, avgKoalas) {
+//   if (avgDolphins >= 2 * avgKoalas) {
+//     console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
+//   } else if (avgKoalas >= 2 * avgDolphins) {
+//     console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`);
+//   } else {
+//     console.log('No team wins...');
+//   }
+// }
+// checkWinner(scoreDolphins, scoreKoalas);
+
+// checkWinner(576, 111);
+
+// // Test 2
+// scoreDolphins = calcAverage(85, 54, 41);
+// scoreKoalas = calcAverage(23, 34, 27);
+// console.log(scoreDolphins, scoreKoalas);
+// checkWinner(scoreDolphins, scoreKoalas);
+
 /*
-const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+///////////////////////////////////////
+// Introduction to Arrays
+const friend1 = 'Michael';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
 
-const avgDolphins = calcAverage(65,54,49);
-const avgKoalas = calcAverage(23,34,27);
+//Literal syntax - the way that we use the most
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends); // (3) ['Michael', 'Steven', 'Peter']
 
-console.log(avgDolphins);
-console.log(avgKoalas);
+//Another way to make array
+const y = new Array(1991, 1984, 2008, 2020);
 
-function checkWinner(avgDolphins, avgKoalas){
-  if(avgDolphins >= avgKoalas * 2){
-    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-  }else if(avgKoalas >= avgDolphins * 2){
-    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
-  }else{
-    console.log(`No one wins.`);
-  }
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = 'Jay';
+console.log(friends);
+// friends = ['Bob', 'Alice']
+
+const firstName = 'Jonas';
+const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
+console.log(jonas);
+console.log(jonas.length);
+
+// Exercise
+const calcAge = function(birthYear){
+  return 2037 - birthYear;
 }
 
-checkWinner(avgDolphins, avgKoalas);
+const years = [1990, 1967, 2002, 2010, 2018];
 
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
 
-//answer
-const calcAverage = (a, b, c) => (a + b + c) / 3;
-console.log(calcAverage(3, 4, 5));
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length -1])];
 
-// Test 1
-let scoreDolphins = calcAverage(44, 23, 71);
-let scoreKoalas = calcAverage(65, 54, 49);
-console.log(scoreDolphins, scoreKoalas);
-
-const checkWinner = function (avgDolphins, avgKoalas) {
-  if (avgDolphins >= 2 * avgKoalas) {
-    console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
-  } else if (avgKoalas >= 2 * avgDolphins) {
-    console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`);
-  } else {
-    console.log('No team wins...');
-  }
-}
-checkWinner(scoreDolphins, scoreKoalas);
-
-checkWinner(576, 111);
-
-// Test 2
-scoreDolphins = calcAverage(85, 54, 41);
-scoreKoalas = calcAverage(23, 34, 27);
-console.log(scoreDolphins, scoreKoalas);
-checkWinner(scoreDolphins, scoreKoalas);
+console.log(ages);
 
 */
+
+///////////////////////////////////////
+// Basic Array Operations (Methods)
+const friends = ['Michael', 'Steven', 'Peter'];
+
+// Add elements
+const newLength = friends.push('Jay');
+console.log(friends); // (4) ['Michael', 'Steven', 'Peter', 'Jay']
+console.log(newLength); // 4
+
+friends.unshift('John'); 
+console.log(friends); // (5) ['John', 'Michael', 'Steven', 'Peter', 'Jay']
+
+// Remove elements
+friends.pop(); // Last
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(); // First
+console.log(friends);
+
+console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('Bob'));
+
+friends.push(23);
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Bob'));
+console.log(friends.includes(23));
+
+if (friends.includes('Steven')) {
+  console.log('You have a friend called Steven');
+}
