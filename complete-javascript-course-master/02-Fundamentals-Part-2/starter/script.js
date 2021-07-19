@@ -537,7 +537,7 @@ for (let i = 0; i < jonas.length; i++) {
 }
 
 
-*/
+
 ///////////////////////////////////////
 // 48. Looping Backwards and Loops in Loops
 const jonas = [
